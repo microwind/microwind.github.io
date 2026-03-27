@@ -13,14 +13,16 @@
 ## AI 编程时代发展历程
 
 > AI能替代编码，无法替代思考；提升思想与认知，是驾驭 AI 的核心竞争力。 
-
+<div style="text-align: center;">
 <img src="./images/ai-evolution.png" width="70%">
+</div>
 
 ## AI 编程核心能力矩阵
 
 > 表层的 API、开发框架日新月异，而算法思想、设计模式、底层逻辑历久弥新。
-
+<div style="text-align: center;">
 <img src="./images/programmer-ability.png" width="70%">
+</div>
 
 ---
 
@@ -93,8 +95,8 @@
 
 ## 🌟 欢迎共建
 
-`站点`：https://microwind.github.io
-`仓库：` https://github.com/microwind
+`站点`： [https://microwind.github.io](https://microwind.github.io) 
+`仓库`： [https://github.com/microwind](https://github.com/microwind)
 
 如果您对本项目感兴趣请加我，欢迎一起共建！
 
