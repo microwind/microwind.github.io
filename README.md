@@ -14,67 +14,14 @@
 
 > AI能替代编码，无法替代思考；提升思想与认知，是驾驭 AI 的核心竞争力。 
 
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 30, 'padding': 10}}}%%
-graph LR
-%% ===== 时间线主线 =====
-P(["2023以前<br/>传统模式"]) --> Q(["2023-2024<br/>Copilot模式"]) --> R(["2025+<br/>Agent模式"]) --> S(["2026+<br/>Agentic模式"])
-
-%% ===== 核心能力纵向显示 =====
-P1("手写代码<br/>实现功能<br/>角色：执行者")
-Q1("L1 AI Copilot<br/>辅助编码<br/>角色：增强执行")
-R1("L2 AI Agent<br/>指导AI<br/>角色：指挥者")
-S1("L3 Agentic AI<br/>驱动AI<br/>角色：决策者")
-
-P --> P1
-Q --> Q1
-R --> R1
-S --> S1
-
-%% ===== 主节点样式 =====
-style P fill:#666666,stroke:#282A2D,color:#ffffff,stroke-width:2px,rx:12,ry:12
-style Q fill:#FF6600,stroke:#c94c4c,color:#ffffff,stroke-width:2px,rx:12,ry:12
-style R fill:#6a5acd,stroke:#1D4ED8,color:#ffffff,stroke-width:2px,rx:12,ry:12
-style S fill:#11908A,stroke:#15803D,color:#ffffff,stroke-width:2px,rx:12,ry:12
-
-%% ===== 子节点样式 =====
-style P1 fill:#E6E8EB,stroke:#90959D,color:#15181E,rx:10,ry:10
-style Q1 fill:#FDE2DF,stroke:#F59E0B,color:#78350F,rx:10,ry:10
-style R1 fill:#F2E7FA,stroke:#7C04AB,color:#1E3A8A,rx:10,ry:10
-style S1 fill:#C2F8F1,stroke:#23B659,color:#14532D,rx:10,ry:10
-```
+<img src="./images/ai-evolution.png" width="70%">
 
 ## AI 编程核心能力矩阵
 
 > 表层的 API、开发框架日新月异，而算法思想、设计模式、底层逻辑历久弥新。
 
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 40, 'rankSpacing': 40, 'padding': 15}}}%%
-graph TD
-    A(AI时代程序员核心能力) --> B[算法思想与数据结构]
-    A --> C[设计模式与架构思想]
-    A --> D[AI提示词工程]
-    A --> E[AI编程Skills库]
-    
-    B --> F[驾驭AI的底层根基]
-    C --> F[驱动AI的架构思维]
-    D --> F[高效协作AI的工具]
-    E --> F[AI全面技能体系]
-    
-    F --> G[从执行者 -> 指挥者 -> 决策者]
+<img src="./images/programmer-ability.png" width="70%">
 
-    %% 主节点
-    style A fill:#615C5C,stroke:#ccc,color:#fff,stroke-width:2px,rx:12,ry:12
-    %% 核心能力节点
-    style B fill:#E75E19,stroke:#ccc,color:#fff,rx:10,ry:10
-    style C fill:#1656BC,stroke:#ccc,color:#fff,rx:10,ry:10
-    style D fill:#C66D01,stroke:#ccc,color:#fff,rx:10,ry:10
-    style E fill:#048D54,stroke:#ccc,color:#fff,rx:10,ry:10
-    %% 汇总能力节点
-    style F fill:#0550C2,stroke:#ccc,color:#fff,rx:12,ry:12
-    %% 最终能力发展节点
-    style G fill:#722C9D,stroke:#ccc,color:#fff,stroke-width:1px,rx:12,ry:12
-```
 ---
 
 ## AI 编程四大核心仓库
@@ -101,7 +48,7 @@ graph TD
 
 ### 3.  [ai-prompt](https://github.com/microwind/ai-prompt) | 程序员 Prompt Engineering 知识库
 
-> 14 大场景提示词，让AI成为你的得意助手
+> 14 大场景提示词，与AI交流称心如意
 
 - 覆盖软件开发全流程的 AI 协作指南  
 - 适配 Claude Code、Codex、OpenClaw
@@ -111,7 +58,7 @@ graph TD
 
 ### 4.  [ai-skills](https://github.com/microwind/ai-skills) | AI 编程 Skills 知识库大全
 
-> 100 + 结构化技能库，用AI学习编程技术
+> 100 + 结构化技能库，用AI搭建工程化系统
 
 - 为程序员量身打造的 AI Skills 体系  
 - 涵盖流行框架、工具、实战技巧  
@@ -146,6 +93,7 @@ graph TD
 
 ## 🌟 欢迎共建
 
+`站点`：https://microwind.github.io
 `仓库：` https://github.com/microwind
 
 如果您对本项目感兴趣请加我，欢迎一起共建！
