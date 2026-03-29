@@ -102,7 +102,7 @@
 
  If you are interested in this project, please add me. I welcome you to build it together!
 
-我是Jarry 李春平, 一个20年互联网工程师
+我是Jarry 李春平, 20年经验的互联网工程师。
 
 - 📧 mail: `jarryli@gmail.com` or `lichunping@buaa.edu.cn`
 - 💬 wechat: `springbuild`
