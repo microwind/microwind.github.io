@@ -1,10 +1,10 @@
 <div style="text-align: center;">
   <h1 style="color:#1f883d; font-weight:900; font-size:2.5em; text-shadow: 0 0 8px rgba(211, 231, 211, 0.5);">MicroWind | AI 编程核心知识库</h1>
   <p style="color:#FF6600; font-size:2em; font-weight:500;">
-      <a href="https://github.com/microwind/algorithms" style="color:#FF6600; text-decoration:none;">算法思想</a> ·
-      <a href="https://github.com/microwind/design-patterns" style="color:#FF6600; text-decoration:none;">设计模式</a> ·
-      <a href="https://github.com/microwind/ai-prompt" style="color:#FF6600; text-decoration:none;">Prompts</a> ·
-      <a href="https://github.com/microwind/ai-skills" style="color:#FF6600; text-decoration:none;">Skills</a>
+      <a href="https://github.com/microwind/algorithms" style="color:#FF6600;">算法思想</a> ·
+      <a href="https://github.com/microwind/design-patterns" style="color:#FF6600;">设计模式</a> ·
+      <a href="https://github.com/microwind/ai-prompt" style="color:#FF6600;">Prompts</a> ·
+      <a href="https://github.com/microwind/ai-skills" style="color:#FF6600;">Skills</a>
   </p>
 </div>
 
