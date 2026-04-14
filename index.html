@@ -213,7 +213,9 @@
         }
         
         .hero-subtitle a:hover {
-            color: var(--primary-green);
+            /*color: var(--primary-green);*/
+            color: #1f2937;
+            /*text-decoration: underline;*/
         }
 
         .hero-links {
@@ -444,11 +446,12 @@
         .evolution-chart, .ability-chart {
             width: 100%;
             height: auto;
-            max-height: 350px;
+            max-height: 450px;
         }
 
         .ability-chart {
-            max-height: 450px;
+            max-height: 480px;
+            margin-bottom: 20px;
         }
         
         /* SVG Node Hover Effects */
@@ -481,15 +484,30 @@
         }
 
         .ability-node:hover rect {
-            filter: url(#shadow2) brightness(1.1);
+            filter: url(#shadow2);
+        }
+
+        .ability-node:hover text {
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
         .center-node:hover rect {
-            filter: url(#shadow2) brightness(1.1);
+            filter: url(#shadow2);
+        }
+
+        .center-node:hover text {
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
         .summary-node:hover rect {
-            filter: url(#shadow2) brightness(1.1);
+            filter: url(#shadow2);
+        }
+
+        .summary-node:hover text {
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
         .final-node:hover rect {
@@ -677,67 +695,48 @@
             transition: all 0.3s ease;
         }
         
-        .icon-envelope {
+        .icon-github {
             display: inline-block;
-            width: 16px;
-            height: 12px;
-            border: 2px solid currentColor;
-            border-radius: 2px;
+            width: 20px;
+            height: 20px;
             position: relative;
         }
         
-        .icon-envelope::before {
+        .icon-github::before {
             content: '';
             position: absolute;
-            top: -4px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 4px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: currentColor;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E") no-repeat center;
+            mask-size: contain;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask-size: contain;
+        }
+
+        .contact-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+        
+        .github-link {
+            color: var(--primary-green);
+            text-decoration: none;
+            padding: 0.5rem;
             border-radius: 50%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .icon-weixin {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            background: currentColor;
-            border-radius: 3px;
-            position: relative;
-        }
-        
-        .icon-weixin::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 8px;
-            height: 8px;
-            background: white;
-            border-radius: 2px;
-        }
-        
-        .icon-qq {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            background: currentColor;
-            border-radius: 50%;
-            position: relative;
-        }
-        
-        .icon-qq::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 2px;
+        .github-link:hover {
+            color: #21883e;
+            background: rgba(31, 136, 61, 0.1);
+            transform: scale(1.05);
         }
 
         /* Responsive Design */
@@ -872,7 +871,7 @@
     <header>
         <nav class="container">
             <div class="logo-section">
-                <img class="logo" src="https://avatars.githubusercontent.com/u/67299763?s=200&v=4" alt="MicroWind Logo" />
+                <a href="https://microwind.github.io"><img class="logo" src="https://avatars.githubusercontent.com/u/67299763?s=200&v=4" alt="MicroWind Logo" /></a>
                 <div class="brand-name">MicroWind</div>
             </div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -884,6 +883,9 @@
                 <a href="#repositories">核心仓库</a>
                 <a href="#vision">核心愿景</a>
                 <a href="#contact">联系我们</a>
+                <a href="https://github.com/microwind" rel="noopener noreferrer" class="github-link" title="GitHub">
+                    <span class="icon-github"></span>
+                </a>
             </div>
         </nav>
     </header>
@@ -914,7 +916,7 @@
                 <p class="section-subtitle">AI能替代编码，无法替代思考；提升思想与认知，是驾驭 AI 的核心竞争力。</p>
                 
                 <div class="evolution-chart-container">
-                    <svg class="evolution-chart" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="evolution-chart" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                                 <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
@@ -925,58 +927,58 @@
                         </defs>
                         
                         <!-- 主时间线 -->
-                        <line x1="40" y1="130" x2="760" y2="130" stroke="#ddd" stroke-width="2"/>
+                        <line x1="40" y1="160" x2="760" y2="160" stroke="#ddd" stroke-width="2"/>
                         
                         <!-- 时间节点组 -->
                         <g class="timeline-group">
                             <!-- 2023以前 -->
-                            <g transform="translate(160, 130)">
+                            <g transform="translate(160, 160)">
                                 <circle r="8" fill="#666"/>
-                                <rect x="-55" y="-50" width="110" height="40" rx="6" fill="#666" filter="url(#shadow)"/>
-                                <text y="-30" text-anchor="middle" fill="white" font-size="14" font-weight="600">2023以前</text>
-                                <text y="-14" text-anchor="middle" fill="white" font-size="12">传统模式</text>
-                                <rect x="-60" y="18" width="120" height="28" rx="5" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
-                                <text y="36" text-anchor="middle" fill="#333" font-size="10">手写代码 • 执行者</text>
-                                <line x1="0" y1="5" x2="0" y2="18" stroke="#999" stroke-width="1"/>
+                                <rect x="-65" y="-70" width="130" height="45" rx="6" fill="#666" filter="url(#shadow)"/>
+                                <text y="-50" text-anchor="middle" fill="white" font-size="13" font-weight="600">2023以前</text>
+                                <text y="-34" text-anchor="middle" fill="white" font-size="11">传统模式</text>
+                                <rect x="-70" y="30" width="140" height="32" rx="5" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+                                <text y="48" text-anchor="middle" fill="#333" font-size="10">手写代码 • 执行者</text>
+                                <line x1="0" y1="8" x2="0" y2="30" stroke="#999" stroke-width="1"/>
                             </g>
                             
                             <!-- 2023-2024 -->
-                            <g transform="translate(320, 130)">
+                            <g transform="translate(320, 160)">
                                 <circle r="8" fill="#FF6600"/>
-                                <rect x="-55" y="-50" width="110" height="40" rx="6" fill="#FF6600" filter="url(#shadow)"/>
-                                <text y="-30" text-anchor="middle" fill="white" font-size="14" font-weight="600">2023-2024</text>
-                                <text y="-14" text-anchor="middle" fill="white" font-size="12">Copilot模式</text>
-                                <rect x="-60" y="18" width="120" height="28" rx="5" fill="#fff5e6" stroke="#FF6600" stroke-width="1"/>
-                                <text y="36" text-anchor="middle" fill="#333" font-size="10">L1 AI Copilot • 增强执行</text>
-                                <line x1="0" y1="5" x2="0" y2="18" stroke="#FF6600" stroke-width="1"/>
+                                <rect x="-65" y="-70" width="130" height="45" rx="6" fill="#FF6600" filter="url(#shadow)"/>
+                                <text y="-50" text-anchor="middle" fill="white" font-size="13" font-weight="600">2023-2024</text>
+                                <text y="-34" text-anchor="middle" fill="white" font-size="11">Copilot模式</text>
+                                <rect x="-70" y="30" width="140" height="32" rx="5" fill="#fff5e6" stroke="#FF6600" stroke-width="1"/>
+                                <text y="48" text-anchor="middle" fill="#333" font-size="10">L1 AI Copilot • 增强执行</text>
+                                <line x1="0" y1="8" x2="0" y2="30" stroke="#FF6600" stroke-width="1"/>
                             </g>
                             
                             <!-- 2025+ -->
-                            <g transform="translate(480, 130)">
+                            <g transform="translate(480, 160)">
                                 <circle r="8" fill="#6a5acd"/>
-                                <rect x="-55" y="-50" width="110" height="40" rx="6" fill="#6a5acd" filter="url(#shadow)"/>
-                                <text y="-30" text-anchor="middle" fill="white" font-size="14" font-weight="600">2025+</text>
-                                <text y="-14" text-anchor="middle" fill="white" font-size="12">Agent模式</text>
-                                <rect x="-60" y="18" width="120" height="28" rx="5" fill="#f0f0ff" stroke="#6a5acd" stroke-width="1"/>
-                                <text y="36" text-anchor="middle" fill="#333" font-size="10">L2 AI Agent • 指挥者</text>
-                                <line x1="0" y1="5" x2="0" y2="18" stroke="#6a5acd" stroke-width="1"/>
+                                <rect x="-65" y="-70" width="130" height="45" rx="6" fill="#6a5acd" filter="url(#shadow)"/>
+                                <text y="-50" text-anchor="middle" fill="white" font-size="13" font-weight="600">2025+</text>
+                                <text y="-34" text-anchor="middle" fill="white" font-size="11">Agent模式</text>
+                                <rect x="-70" y="30" width="140" height="32" rx="5" fill="#f0f0ff" stroke="#6a5acd" stroke-width="1"/>
+                                <text y="48" text-anchor="middle" fill="#333" font-size="10">L2 AI Agent • 指挥者</text>
+                                <line x1="0" y1="8" x2="0" y2="30" stroke="#6a5acd" stroke-width="1"/>
                             </g>
                             
                             <!-- 2026+ -->
-                            <g transform="translate(640, 130)">
+                            <g transform="translate(640, 160)">
                                 <circle r="8" fill="#11908A"/>
-                                <rect x="-55" y="-50" width="110" height="40" rx="6" fill="#11908A" filter="url(#shadow)"/>
-                                <text y="-30" text-anchor="middle" fill="white" font-size="14" font-weight="600">2026+</text>
-                                <text y="-14" text-anchor="middle" fill="white" font-size="12">Agentic模式</text>
-                                <rect x="-60" y="18" width="120" height="28" rx="5" fill="#e6f7f6" stroke="#11908A" stroke-width="1"/>
-                                <text y="36" text-anchor="middle" fill="#333" font-size="10">L3 Agentic AI • 决策者</text>
-                                <line x1="0" y1="5" x2="0" y2="18" stroke="#11908A" stroke-width="1"/>
+                                <rect x="-65" y="-70" width="130" height="45" rx="6" fill="#11908A" filter="url(#shadow)"/>
+                                <text y="-50" text-anchor="middle" fill="white" font-size="13" font-weight="600">2026+</text>
+                                <text y="-34" text-anchor="middle" fill="white" font-size="11">Agentic模式</text>
+                                <rect x="-70" y="30" width="140" height="32" rx="5" fill="#e6f7f6" stroke="#11908A" stroke-width="1"/>
+                                <text y="48" text-anchor="middle" fill="#333" font-size="10">L3 Agentic AI • 决策者</text>
+                                <line x1="0" y1="8" x2="0" y2="30" stroke="#11908A" stroke-width="1"/>
                             </g>
                             
                             <!-- 连接箭头 -->
-                            <line x1="165" y1="130" x2="315" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-                            <line x1="325" y1="130" x2="475" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-                            <line x1="485" y1="130" x2="635" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+                            <line x1="165" y1="160" x2="315" y2="160" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+                            <line x1="325" y1="160" x2="475" y2="160" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+                            <line x1="485" y1="160" x2="635" y2="160" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
                         </g>
                     </svg>
                 </div>
@@ -994,65 +996,68 @@
                             <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                                 <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
                             </filter>
+                            <marker id="arrow2" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+                                <path d="M 0 0 L 8 4 L 0 8" fill="#666"/>
+                            </marker>
                         </defs>
                         
                         <!-- 中心节点 -->
                         <g transform="translate(300, 55)">
-                            <rect x="-90" y="-22" width="180" height="44" rx="7" fill="#1f883d" filter="url(#shadow)"/>
+                            <rect x="-100" y="-25" width="200" height="50" rx="7" fill="#1f883d" filter="url(#shadow)"/>
                             <text y="2" text-anchor="middle" fill="white" font-size="14" font-weight="600">AI时代程序员核心能力</text>
                         </g>
                         
                         <!-- 连接线 -->
-                        <line x1="300" y1="77" x2="150" y2="130" stroke="#ddd" stroke-width="2"/>
-                        <line x1="300" y1="77" x2="450" y2="130" stroke="#ddd" stroke-width="2"/>
-                        <line x1="300" y1="77" x2="150" y2="210" stroke="#ddd" stroke-width="2"/>
-                        <line x1="300" y1="77" x2="450" y2="210" stroke="#ddd" stroke-width="2"/>
+                        <line x1="300" y1="80" x2="150" y2="140" stroke="#ddd" stroke-width="2" marker-end="url(#arrow2)"/>
+                        <line x1="300" y1="80" x2="450" y2="140" stroke="#ddd" stroke-width="2" marker-end="url(#arrow2)"/>
+                        <line x1="300" y1="80" x2="150" y2="230" stroke="#ddd" stroke-width="2" marker-end="url(#arrow2)"/>
+                        <line x1="300" y1="80" x2="450" y2="230" stroke="#ddd" stroke-width="2" marker-end="url(#arrow2)"/>
                         
                         <!-- 四个能力节点 -->
-                        <g transform="translate(150, 130)">
-                            <rect x="-60" y="-20" width="120" height="40" rx="6" fill="#E75E19" filter="url(#shadow)"/>
-                            <text y="-2" text-anchor="middle" fill="white" font-size="13" font-weight="600">算法思想</text>
-                            <text y="10" text-anchor="middle" fill="white" font-size="11">数据结构</text>
+                        <g transform="translate(150, 140)">
+                            <rect x="-70" y="-25" width="140" height="50" rx="6" fill="#E75E19" filter="url(#shadow)"/>
+                            <text y="-3" text-anchor="middle" fill="white" font-size="14" font-weight="600">算法思想</text>
+                            <text y="12" text-anchor="middle" fill="white" font-size="11">数据结构</text>
                         </g>
                         
-                        <g transform="translate(450, 130)">
-                            <rect x="-60" y="-20" width="120" height="40" rx="6" fill="#1656BC" filter="url(#shadow)"/>
-                            <text y="-2" text-anchor="middle" fill="white" font-size="13" font-weight="600">设计模式</text>
-                            <text y="10" text-anchor="middle" fill="white" font-size="11">架构思想</text>
+                        <g transform="translate(450, 140)">
+                            <rect x="-70" y="-25" width="140" height="50" rx="6" fill="#1656BC" filter="url(#shadow)"/>
+                            <text y="-3" text-anchor="middle" fill="white" font-size="14" font-weight="600">设计模式</text>
+                            <text y="12" text-anchor="middle" fill="white" font-size="11">架构思想</text>
                         </g>
                         
-                        <g transform="translate(150, 210)">
-                            <rect x="-60" y="-20" width="120" height="40" rx="6" fill="#C66D01" filter="url(#shadow)"/>
-                            <text y="-2" text-anchor="middle" fill="white" font-size="13" font-weight="600">AI提示词工程</text>
-                            <text y="10" text-anchor="middle" fill="white" font-size="11">Prompt Engineering</text>
+                        <g transform="translate(150, 230)">
+                            <rect x="-70" y="-25" width="140" height="50" rx="6" fill="#C66D01" filter="url(#shadow)"/>
+                            <text y="-3" text-anchor="middle" fill="white" font-size="14" font-weight="600">AI提示词工程</text>
+                            <text y="12" text-anchor="middle" fill="white" font-size="11">Prompt Engineering</text>
                         </g>
                         
-                        <g transform="translate(450, 210)">
-                            <rect x="-60" y="-20" width="120" height="40" rx="6" fill="#048D54" filter="url(#shadow)"/>
-                            <text y="-2" text-anchor="middle" fill="white" font-size="13" font-weight="600">AI编程Skills</text>
-                            <text y="10" text-anchor="middle" fill="white" font-size="11">技能体系</text>
+                        <g transform="translate(450, 230)">
+                            <rect x="-70" y="-25" width="140" height="50" rx="6" fill="#048D54" filter="url(#shadow)"/>
+                            <text y="-3" text-anchor="middle" fill="white" font-size="14" font-weight="600">AI编程Skills</text>
+                            <text y="12" text-anchor="middle" fill="white" font-size="11">技能体系</text>
                         </g>
                         
                         <!-- 汇总节点 -->
-                        <g transform="translate(300, 290)">
-                            <rect x="-70" y="-20" width="140" height="40" rx="6" fill="#0550C2" filter="url(#shadow)"/>
-                            <text y="2" text-anchor="middle" fill="white" font-size="13" font-weight="600">AI全面技能体系</text>
+                        <g transform="translate(300, 310)">
+                            <rect x="-80" y="-25" width="160" height="50" rx="6" fill="#0550C2" filter="url(#shadow)"/>
+                            <text y="2" text-anchor="middle" fill="white" font-size="14" font-weight="600">AI全面技能体系</text>
                         </g>
                         
                         <!-- 汇总连接线 -->
-                        <line x1="150" y1="150" x2="240" y2="280" stroke="#ddd" stroke-width="1"/>
-                        <line x1="450" y1="150" x2="360" y2="280" stroke="#ddd" stroke-width="1"/>
-                        <line x1="150" y1="230" x2="240" y2="280" stroke="#ddd" stroke-width="1"/>
-                        <line x1="450" y1="230" x2="360" y2="280" stroke="#ddd" stroke-width="1"/>
+                        <line x1="150" y1="165" x2="240" y2="300" stroke="#ddd" stroke-width="1" marker-end="url(#arrow2)"/>
+                        <line x1="450" y1="165" x2="360" y2="300" stroke="#ddd" stroke-width="1" marker-end="url(#arrow2)"/>
+                        <line x1="150" y1="255" x2="240" y2="300" stroke="#ddd" stroke-width="1" marker-end="url(#arrow2)"/>
+                        <line x1="450" y1="255" x2="360" y2="300" stroke="#ddd" stroke-width="1" marker-end="url(#arrow2)"/>
                         
                         <!-- 最终路径 -->
-                        <g transform="translate(300, 340)">
-                            <rect x="-90" y="-18" width="180" height="36" rx="6" fill="#722C9D" filter="url(#shadow)"/>
-                            <text y="2" text-anchor="middle" fill="white" font-size="12" font-weight="600">执行者 → 指挥者 → 决策者</text>
+                        <g transform="translate(300, 380)">
+                            <rect x="-100" y="-20" width="200" height="40" rx="6" fill="#722C9D" filter="url(#shadow)"/>
+                            <text y="2" text-anchor="middle" fill="white" font-size="14" font-weight="600">执行者 → 指挥者 → 决策者</text>
                         </g>
                         
                         <!-- 最终连接线 -->
-                        <line x1="300" y1="310" x2="300" y2="322" stroke="#0550C2" stroke-width="2"/>
+                        <line x1="300" y1="335" x2="300" y2="360" stroke="#0550C2" stroke-width="2" marker-end="url(#arrow2)"/>
                     </svg>
                 </div>
             </div>
@@ -1072,7 +1077,9 @@
                             <li>注释详尽、例子递进，兼顾算法原理与编程语言特性</li>
                         </ul>
                         <a href="https://github.com/microwind/algorithms" class="repo-link">
-                            访问仓库 <span class="icon-arrow-right"></span>
+                            <span class="icon-github"></span>
+                            <span>GitHub</span>
+                            <span class="icon-arrow-right"></span>
                         </a>
                     </div>
 
@@ -1085,7 +1092,9 @@
                             <li>持续完善，打造 AI 时代架构思维库</li>
                         </ul>
                         <a href="https://github.com/microwind/design-patterns" class="repo-link">
-                            访问仓库 <span class="icon-arrow-right"></span>
+                            <span class="icon-github"></span>
+                            <span>GitHub</span>
+                            <span class="icon-arrow-right"></span>
                         </a>
                     </div>
 
@@ -1098,7 +1107,9 @@
                             <li>提示词实践，提高工作效率</li>
                         </ul>
                         <a href="https://github.com/microwind/ai-prompt" class="repo-link">
-                            访问仓库 <span class="icon-arrow-right"></span>
+                            <span class="icon-github"></span>
+                            <span>GitHub</span>
+                            <span class="icon-arrow-right"></span>
                         </a>
                     </div>
 
@@ -1111,7 +1122,9 @@
                             <li>AI 精准匹配技能需求，高效辅助开发</li>
                         </ul>
                         <a href="https://github.com/microwind/ai-skills" class="repo-link">
-                            访问仓库 <span class="icon-arrow-right"></span>
+                            <span class="icon-github"></span>
+                            <span>GitHub</span>
+                            <span class="icon-arrow-right"></span>
                         </a>
                     </div>
                 </div>
@@ -1153,15 +1166,27 @@
                 
                 <div class="contact-info">
                     <div class="contact-item">
-                        <span class="icon-envelope"></span>
+                        <svg class="contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                        </svg>
                         <span>jarryli@gmail.com</span>
                     </div>
                     <div class="contact-item">
-                        <span class="icon-qq"></span>
+                        <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <ellipse cx="12" cy="12" rx="10" ry="9"/>
+                            <circle cx="9" cy="10" r="2" fill="white"/>
+                            <circle cx="15" cy="10" r="2" fill="white"/>
+                            <circle cx="9" cy="10" r="0.8"/>
+                            <circle cx="15" cy="10" r="0.8"/>
+                            <ellipse cx="12" cy="14" rx="2.5" ry="1.5" fill="#FFA500"/>
+                        </svg>
                         <span>QQ: 12263539</span>
                     </div>
                     <div class="contact-item">
-                        <span class="icon-weixin"></span>
+                        <svg class="contact-icon" width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.32.32 0 0 0-.12.366l.218.81a.6.6 0 0 1 .029.117.166.166 0 0 1-.162.162.2.2 0 0 1-.092-.03l-1.057-.61a.5.5 0 0 0-.256-.074.5.5 0 0 0-.142.021 5.7 5.7 0 0 1-1.576.22M9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.6.6 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.63.63 0 0 0 .098.356"/>
+                            <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.5.5 0 0 0-.032.14.19.19 0 0 0 .193.193q.06 0 .111-.029l1.268-.733a.6.6 0 0 1 .308-.088q.088 0 .171.025a6.8 6.8 0 0 0 1.625.26 4.5 4.5 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02l.15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826m4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0m3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0"/>
+                        </svg>
                         <span>springbuild</span>
                     </div>
                 </div>
