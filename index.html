@@ -493,6 +493,10 @@
             text-underline-offset: 2px;
         }
 
+        .center-node:hover {
+            transform: scale(1.05);
+        }
+
         .center-node:hover rect {
             filter: url(#shadow2);
         }
@@ -500,6 +504,10 @@
         .center-node:hover text {
             text-decoration: underline;
             text-underline-offset: 2px;
+        }
+
+        .summary-node:hover {
+            transform: scale(1.05);
         }
 
         .summary-node:hover rect {
@@ -513,6 +521,32 @@
 
         .final-node:hover rect {
             filter: url(#shadow2) brightness(1.1);
+        }
+
+        .ability-chart rect {
+            transition: all 0.3s ease;
+        }
+
+        .ability-chart text {
+            pointer-events: none;
+        }
+
+        .ability-chart rect:hover {
+            filter: brightness(1.15) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+            transform: translateY(-2px);
+        }
+
+        .evolution-chart rect {
+            transition: all 0.3s ease;
+        }
+
+        .evolution-chart rect:hover {
+            filter: brightness(1.25) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+            transform: translateY(-2px);
+        }
+
+        .evolution-chart text {
+            pointer-events: none;
         }
 
         /* SVG Animations */
@@ -992,7 +1026,7 @@
                 <p class="section-subtitle">表层的 API、开发框架日新月异，而算法思想、设计模式、底层逻辑历久弥新。</p>
                 
                 <div class="ability-chart-container">
-                    <svg class="ability-chart" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="ability-chart" viewBox="0 10 600 400" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                                 <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
