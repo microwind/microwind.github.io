@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MicroWind | AI 编程核心知识库</title>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/67299763?s=200&v=4" type="image/png">
     <style>
         :root {
             --primary-green: #1f883d;
@@ -81,6 +82,19 @@
             gap: 1rem;
         }
 
+        .logo-section a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .logo-section a:visited {
+            color: var(--primary-green);
+        }
+
+        .logo-section a:hover {
+            color: var(--accent-orange);
+        }
+
         .logo {
             width: 40px;
             height: 40px;
@@ -101,6 +115,19 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary-green);
+        }
+
+        .brand-name a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .brand-name a:visited {
+            color: var(--primary-green);
+        }
+
+        .brand-name a:hover {
+            color: var(--accent-orange);
         }
 
         .nav-links {
@@ -177,6 +204,7 @@
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 600;
+            margin-top: 1rem;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out;
         }
@@ -907,7 +935,7 @@
         <nav class="container">
             <div class="logo-section">
                 <a href="https://microwind.github.io"><img class="logo" src="https://avatars.githubusercontent.com/u/67299763?s=200&v=4" alt="MicroWind Logo" /></a>
-                <div class="brand-name">MicroWind</div>
+                <div class="brand-name"><a href="https://microwind.github.io">MicroWind</a></div>
             </div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span class="icon-bars"></span>
@@ -932,10 +960,10 @@
                     <div class="hero-badge">AI 编程时代核心知识库</div>
                     <h1>MicroWind | AI 编程核心知识库</h1>
                     <div class="hero-subtitle">
-                        <a href="https://github.com/microwind/algorithms">算法思想</a> ·
-                        <a href="https://github.com/microwind/design-patterns">设计模式</a> ·
-                        <a href="https://github.com/microwind/ai-prompt">提示词工程</a> ·
-                        <a href="https://github.com/microwind/ai-skills">AI 技能</a>
+                        <a href="https://microwind.github.io/algorithms">算法思想</a> ·
+                        <a href="https://microwind.github.io/design-patterns">设计模式</a> ·
+                        <a href="https://microwind.github.io/ai-prompt">提示词工程</a> ·
+                        <a href="https://microwind.github.io/ai-skills">AI 技能</a>
                     </div>
                     <div class="hero-links">
                         <a href="#repositories">探索四大核心仓库</a>
@@ -1111,11 +1139,17 @@
                             <li>C/Java/Python/JS/Go/TypeScript/Rust 多种语言实现</li>
                             <li>注释详尽、例子递进，兼顾算法原理与编程语言特性</li>
                         </ul>
-                        <a href="https://github.com/microwind/algorithms" class="repo-link">
-                            <span class="icon-github"></span>
-                            <span>GitHub</span>
-                            <span class="icon-arrow-right"></span>
-                        </a>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem; justify-content: center;">
+                            <a href="https://microwind.github.io/algorithms" class="repo-link">
+                                <span>访问站点</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                            <a href="https://github.com/microwind/algorithms" class="repo-link">
+                                <span class="icon-github"></span>
+                                <span>GitHub</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="repo-card">
@@ -1126,11 +1160,17 @@
                             <li>支持 C/Java/JS/Python/Go 多语言实现</li>
                             <li>持续完善，打造 AI 时代架构思维库</li>
                         </ul>
-                        <a href="https://github.com/microwind/design-patterns" class="repo-link">
-                            <span class="icon-github"></span>
-                            <span>GitHub</span>
-                            <span class="icon-arrow-right"></span>
-                        </a>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem; justify-content: center;">
+                            <a href="https://microwind.github.io/design-patterns" class="repo-link">
+                                <span>访问站点</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                            <a href="https://github.com/microwind/design-patterns" class="repo-link">
+                                <span class="icon-github"></span>
+                                <span>GitHub</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="repo-card">
@@ -1141,11 +1181,17 @@
                             <li>适配 Claude Code、Codex、OpenClaw</li>
                             <li>提示词实践，提高工作效率</li>
                         </ul>
-                        <a href="https://github.com/microwind/ai-prompt" class="repo-link">
-                            <span class="icon-github"></span>
-                            <span>GitHub</span>
-                            <span class="icon-arrow-right"></span>
-                        </a>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem; justify-content: center;">
+                            <a href="https://microwind.github.io/ai-prompt" class="repo-link">
+                                <span>访问站点</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                            <a href="https://github.com/microwind/ai-prompt" class="repo-link">
+                                <span class="icon-github"></span>
+                                <span>GitHub</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                        </div>
                     </div>
 
                     <div class="repo-card">
@@ -1156,11 +1202,17 @@
                             <li>涵盖流行框架、工具、实战技巧</li>
                             <li>AI 精准匹配技能需求，高效辅助开发</li>
                         </ul>
-                        <a href="https://github.com/microwind/ai-skills" class="repo-link">
-                            <span class="icon-github"></span>
-                            <span>GitHub</span>
-                            <span class="icon-arrow-right"></span>
-                        </a>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem; justify-content: center;">
+                            <a href="https://microwind.github.io/ai-skills" class="repo-link">
+                                <span>访问站点</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                            <a href="https://github.com/microwind/ai-skills" class="repo-link">
+                                <span class="icon-github"></span>
+                                <span>GitHub</span>
+                                <span class="icon-arrow-right"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
